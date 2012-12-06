@@ -1,11 +1,10 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'smart_devnet/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "smart_devnet"
-  gem.version       = SmartDevnet::VERSION
+  gem.version       = "0.0.2"
   gem.authors       = ["Katherine G. Pe"]
   gem.email         = ["info@bridgeutopiaweb.com"]
   gem.description   = %q{Lightweight gem for the SMART Devnet API}
