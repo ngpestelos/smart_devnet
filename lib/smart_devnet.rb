@@ -1,4 +1,3 @@
-require "smart_devnet/version"
 require 'uri'
 require 'json'
 
