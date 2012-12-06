@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "smart_devnet"
-  gem.version       = "0.0.2"
+  gem.version       = "0.0.3"
   gem.authors       = ["Katherine G. Pe"]
   gem.email         = ["info@bridgeutopiaweb.com"]
   gem.description   = %q{Lightweight gem for the SMART Devnet API}
@@ -15,4 +15,7 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+
+  #dependencies
+  gem.add_development_dependency 'minitest'
 end

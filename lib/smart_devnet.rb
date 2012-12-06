@@ -1,5 +1,4 @@
 require 'uri'
-require 'json'
 
 class SmartDevnet
 
@@ -8,10 +7,12 @@ class SmartDevnet
   attr :url
   attr :headers
   attr :access_code
+  attr :path_to_cert
 
   def initialize(sp_id, sp_password, nonce, created_at, access_code, sp_service_id, path_to_cert=nil)
     @access_code = access_code
     @url  = URL % access_code
+    @path_to_cert = path_to_cert
 
     @headers = [%{'Content-Type: application/json'},
       %{'Accept: application/xml'},
@@ -43,7 +44,7 @@ class SmartDevnet
   private
 
   def post(request)
-    system(%{curl -i #{headers} -X POST -d #{request} #{url}})
+    system(%{curl --capath #{path_to_cert} -i #{headers} -X POST -d #{request} #{url}})
   end
 
 end
