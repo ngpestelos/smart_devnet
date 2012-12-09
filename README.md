@@ -2,6 +2,10 @@
 
 Ruby wrapper for REST API of SMART Developer Network.
 
+## Requirements
+
+    Ruby 1.9.x
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -15,6 +19,7 @@ And then execute:
 Or install it yourself as:
 
     $ gem install smart_devnet
+
 
 ## Usage
 
