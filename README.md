@@ -23,8 +23,16 @@ Or install it yourself as:
 
 ## Usage
 
-    SmartDevnet.connect(sp_id: '  ', sp_password: '  ', nonce:'  ', created_at: '  ', access_code: '  ', sp_service_id: '  ', path_to_cert: ' ')
-    SmartDevnet.current.send_sms('mobile_number', "Testing API.")
+    SmartDevnet.connect(
+      sp_id: '', 
+      sp_password: '', 
+      nonce:'', 
+      created_at: '', 
+      access_code: '', 
+      sp_service_id: '', 
+      path_to_cert: '')
+    response = SmartDevnet.current.send_sms('mobile_number', "Testing API.")
+    puts response.body, response.code, response.message, response.headers.inspect
 
 ## Contributing
 
