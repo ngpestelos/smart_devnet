@@ -24,12 +24,12 @@ Or install it yourself as:
 ## Usage
 
     SmartDevnet.connect(
-      sp_id: '', 
-      sp_password: '', 
-      nonce:'', 
-      created_at: '', 
-      access_code: '', 
-      sp_service_id: '', 
+      sp_id: '',
+      sp_password: '',
+      nonce:'',
+      created_at: '',
+      access_code: '',
+      sp_service_id: '',
       path_to_cert: '')
     response = SmartDevnet.current.send_sms('mobile_number', "Testing API.")
     puts response.body, response.code, response.message, response.headers.inspect
@@ -52,4 +52,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Acknowledgements
 
-This was created by <a href="http://blog.bridgeutopiaweb.com" target="_blank">Katherine G. Pe</a>.
+<a href="http://blog.bridgeutopiaweb.com" target="_blank">Katherine G. Pe</a>
+<a href="http://bryanbibat.net" target="_blank">Bryan Bibat</a>

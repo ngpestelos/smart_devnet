@@ -38,12 +38,12 @@ class SmartDevnet
   end
 
   def send_sms(mobile_number, message)
-    request = { "outboundSMSMessageRequest" => { 
-             "address" => ["tel:#{mobile_number}"], 
-             "senderAddress" => "#{access_code}", 
+    request = { "outboundSMSMessageRequest" => {
+             "address" => ["tel:#{mobile_number}"],
+             "senderAddress" => "#{access_code}",
              "outboundSMSTextMessage" => {"message" => "#{message}" }}}.to_json
     response = post(request)
-    valid?(response) || raise(RuntimeError, send_request)
+    valid?(response) || raise(RuntimeError, response)
     response
   end
 

@@ -5,7 +5,7 @@ describe SmartDevnet  do
   let(:access_code) { '36804' }
   let(:path_to_cert) { '/path/to/file.crt' }
   let(:current) { SmartDevnet.connect(sp_id: '00991', sp_password: '/sfdfdVz0DGJkJJpJ1ebpy', nonce:'201ddfdf1', created_at: '2010-08-21T08:33:46Z', access_code: access_code, sp_service_id: '00121fdfd57', path_to_cert: path_to_cert)  }
-  let(:expected_headers) { "-H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: WSSE realm=\"SDP\",profile=\"UsernameToken\"' -H 'X-WSSE: UsernameToken Username=\"00991\",PasswordDigest=\"/sfdfdVz0DGJkJJpJ1ebpy\",Nonce=\"201ddfdf1\", Created=\"2010-08-21T08:33:46Z\"' -H 'X-RequestHeader: request TransId=\"\", ServiceId=\"00121fdfd57\"'" }
+  let(:expected_headers) { {"Content-Type"=>"application/json", "Accept"=>"application/json", "Authorization"=>"WSSE realm=\"SDP\",profile=\"UsernameToken\"", "X-WSSE"=>" UsernameToken Username=\"00991\",PasswordDigest=\"/sfdfdVz0DGJkJJpJ1ebpy\",Nonce=\"201ddfdf1\", Created=\"2010-08-21T08:33:46Z\"", "X-RequestHeader"=>"request TransId=\"\", ServiceId=\"00121fdfd57\""} }
 
   describe "#headers" do
     it "generates correct headers" do
