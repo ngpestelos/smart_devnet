@@ -24,10 +24,4 @@ describe SmartDevnet  do
       assert_equal path_to_cert, current.path_to_cert
     end
   end
-
-  describe "#send_sms" do
-    it "should raise an error when the response is not 201 Created" do
-      assert_raises(RuntimeError) { current.send_sms("0923232323", "This should fail.") }
-    end
-  end
 end
