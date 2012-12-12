@@ -17,4 +17,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_development_dependency 'minitest'
+  gem.add_runtime_dependency 'httparty', '~> 0.9.0'
 end
