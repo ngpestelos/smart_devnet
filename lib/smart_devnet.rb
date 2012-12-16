@@ -43,11 +43,11 @@ class SmartDevnet
              "senderAddress" => "#{access_code}",
              "outboundSMSTextMessage" => {"message" => "#{message}" }}}.to_json
     response = post(request)
-    valid?(response) || raise(RuntimeError, response)
+    message_sent?(response) || raise(RuntimeError, response)
     response
   end
 
-  def valid?(response)
+  def message_sent?(response)
     response.code == 201
   end
 

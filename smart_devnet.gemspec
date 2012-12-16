@@ -4,10 +4,10 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "smart_devnet"
-  gem.version       = "0.0.7"
-  gem.authors       = ["Katherine G. Pe"]
-  gem.email         = ["info@bridgeutopiaweb.com"]
-  gem.description   = %q{Lightweight gem for the SMART Devnet API}
+  gem.version       = "0.0.8"
+  gem.authors       = ["Katherine G. Pe", "Bryan Bibat"]
+  gem.email         = ["info@bridgeutopiaweb.com", "bry@bryanbibat.net"]
+  gem.description   = %q{Gem for the SMART Devnet API}
   gem.summary       = %q{Currently supports SMS API only}
   gem.homepage      = "http://www.smart.com.ph/developer"
 
